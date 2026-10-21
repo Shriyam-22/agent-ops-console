@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+body {
+  background:
+    radial-gradient(900px 500px at 85% -10%, rgba(124, 108, 255, 0.16), transparent 60%),
+    radial-gradient(700px 400px at 100% 100%, rgba(198, 255, 61, 0.06), transparent 60%),
+    #070a14;
+  background-attachment: fixed;
+}
+
+::selection {
+  background: rgba(198, 255, 61, 0.3);
+}
+
+@layer components {
+  .field {
+    @apply w-full rounded-xl border border-white/10 bg-ink-850 px-3 py-2 text-sm text-fog-100 outline-none transition placeholder:text-fog-500 focus:border-violet/60 focus:ring-2 focus:ring-violet/20;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2 text-sm font-semibold transition disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply bg-lime text-ink-950 hover:bg-lime-dim;
+  }
+
+  .btn-ghost {
+    @apply border border-white/10 text-fog-100 hover:bg-white/[0.06];
+  }
+}
